@@ -1,7 +1,7 @@
 # Un-hide and use this explore, or copy the joins into another explore, to get all the fully nested relationships from this view
 
 explore: hackathon_valiuz {
-  hidden: yes
+  hidden: no
   join: hackathon_valiuz__products_cug {
     view_label: "Hackathon Valiuz: Products Cug"
     sql: LEFT JOIN UNNEST(${hackathon_valiuz.products_cug}) as hackathon_valiuz__products_cug ;;
