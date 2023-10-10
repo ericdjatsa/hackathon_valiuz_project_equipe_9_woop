@@ -1,27 +1,29 @@
 # Un-hide and use this explore, or copy the joins into another explore, to get all the fully nested relationships from this view
+
 explore: hackathon_valiuz {
   hidden: yes
-    join: hackathon_valiuz__products_cug {
-      view_label: "Hackathon Valiuz: Products Cug"
-      sql: LEFT JOIN UNNEST(${hackathon_valiuz.products_cug}) as hackathon_valiuz__products_cug ;;
-      relationship: one_to_many
-    }
-    join: hackathon_valiuz__products_ean {
-      view_label: "Hackathon Valiuz: Products Ean"
-      sql: LEFT JOIN UNNEST(${hackathon_valiuz.products_ean}) as hackathon_valiuz__products_ean ;;
-      relationship: one_to_many
-    }
-    join: hackathon_valiuz__product_types {
-      view_label: "Hackathon Valiuz: Product Types"
-      sql: LEFT JOIN UNNEST(${hackathon_valiuz.product_types}) as hackathon_valiuz__product_types ;;
-      relationship: one_to_many
-    }
-    join: hackathon_valiuz__order_services {
-      view_label: "Hackathon Valiuz: Order Services"
-      sql: LEFT JOIN UNNEST(${hackathon_valiuz.order_services}) as hackathon_valiuz__order_services ;;
-      relationship: one_to_many
-    }
+  join: hackathon_valiuz__products_cug {
+    view_label: "Hackathon Valiuz: Products Cug"
+    sql: LEFT JOIN UNNEST(${hackathon_valiuz.products_cug}) as hackathon_valiuz__products_cug ;;
+    relationship: one_to_many
+  }
+  join: hackathon_valiuz__products_ean {
+    view_label: "Hackathon Valiuz: Products Ean"
+    sql: LEFT JOIN UNNEST(${hackathon_valiuz.products_ean}) as hackathon_valiuz__products_ean ;;
+    relationship: one_to_many
+  }
+  join: hackathon_valiuz__product_types {
+    view_label: "Hackathon Valiuz: Product Types"
+    sql: LEFT JOIN UNNEST(${hackathon_valiuz.product_types}) as hackathon_valiuz__product_types ;;
+    relationship: one_to_many
+  }
+  join: hackathon_valiuz__order_services {
+    view_label: "Hackathon Valiuz: Order Services"
+    sql: LEFT JOIN UNNEST(${hackathon_valiuz.order_services}) as hackathon_valiuz__order_services ;;
+    relationship: one_to_many
+  }
 }
+
 view: hackathon_valiuz {
   sql_table_name: `valiuz-ghack-lil23-7143.woop_data.hackathon_valiuz` ;;
 
