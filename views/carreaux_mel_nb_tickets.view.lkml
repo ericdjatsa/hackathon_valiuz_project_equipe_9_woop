@@ -17,6 +17,11 @@ view: carreaux_mel_nb_tickets {
     type: string
     sql: ${TABLE}.longitude_client ;;
   }
+  dimension: client_location {
+    type:  location
+    sql_latitude: ${TABLE}.latitude_client ;;
+    sql_longitude: ${TABLE}.longitude_client ;;
+  }
   dimension: store_geom {
     type: string
     sql: ${TABLE}.store_geom ;;
@@ -28,6 +33,11 @@ view: carreaux_mel_nb_tickets {
   dimension: store_longitude {
     type: number
     sql: ${TABLE}.store_longitude ;;
+  }
+  dimension: store_location {
+    type:  location
+    sql_latitude: ${TABLE}.store_latitude ;;
+    sql_longitude: ${TABLE}.store_longitude ;;
   }
   measure: sum_nb {
     label: "Somme des tickets"
