@@ -29,8 +29,9 @@ view: carreaux_mel_nb_tickets {
     type: number
     sql: ${TABLE}.store_longitude ;;
   }
-  dimension: sum_nb {
-    type: number
+  measure: sum_nb {
+    label: "Somme des tickets"
+    type: sum
     sql: ${TABLE}.sumNb ;;
   }
   measure: count {
